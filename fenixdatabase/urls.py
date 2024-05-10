@@ -22,5 +22,7 @@ from django.urls import path, include  # модуль для импортиро�
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('women/', include('women.urls')),   # импорт представления из файла проекта 
+    path('', include('women.urls')),   # импорт представления из файла проекта
 ]
+
+handler404 = pageNotFound
